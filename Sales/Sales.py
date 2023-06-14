@@ -284,9 +284,16 @@ def run_sales():
 
             
             elif choice == 4:
-                id = int(input("Please input the product id: "))
-                message = input("What's the problem? ") #example: product empty
-                add_notification(id, message)
+                print("""
+                1. Display Notify List
+                2. Add New Notification""")
+                notif = int(input("Welcome to Notify: "))
+                if notif == 1:
+                    display_table("Notify")
+                elif notif == 2:
+                    id = int(input("Please input the product id: "))
+                    message = input("What's the problem? ") #example: product empty
+                    add_notification(id, message)
 
 
             elif choice == 0:
